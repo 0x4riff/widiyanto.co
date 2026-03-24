@@ -1,199 +1,548 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arif Widiyanto — DevOps | Fullstack Developer | AI Enthusiast</title>
-  <meta name="description" content="Premium personal portfolio of Arif Widiyanto — DevOps, Fullstack Developer, and AI Enthusiast." />
+  <title>Arif Widiyanto - DevOps | Fullstack Developer | AI Enthusiast</title>
+  <meta name="description" content="Premium personal portfolio of Arif Widiyanto - DevOps, Fullstack Developer, and AI Enthusiast." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero">
-    <div class="mesh mesh-a"></div>
-    <div class="mesh mesh-b"></div>
+  <!-- Animated Background -->
+  <div class="bg-gradient"></div>
+  <div class="bg-noise"></div>
+  <div class="bg-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
 
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a class="logo" href="#">
+        <span class="logo-icon">A</span>
+        <span class="logo-text">Arif</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="mobile-menu">
+    <div class="mobile-menu-content">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
     <div class="container">
-      <nav class="topbar">
-        <a class="brand" href="#">AW</a>
-        <div class="nav-actions">
-          <a class="ghost" href="#projects">Projects</a>
-          <a class="ghost" href="#experience">Experience</a>
-          <button id="themeToggle" class="toggle" aria-label="Toggle dark/light mode">🌙 Dark</button>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse"></span>
+          Available for freelance & full-time collaboration
         </div>
-      </nav>
-
-      <div class="hero-grid reveal">
-        <div>
-          <p class="eyebrow">Available for freelance & full-time collaboration</p>
-          <h1>Arif Widiyanto</h1>
-          <p class="headline">DevOps Engineer • Fullstack Developer • AI Enthusiast</p>
-          <p class="subtitle">
-            15+ years building resilient IT systems, practical automation, and business-ready software.
-            I blend engineering depth with project execution discipline.
-          </p>
-
-          <div class="actions">
-            <a class="btn btn-primary" href="#hire">Hire Me</a>
-            <a class="btn" href="resume-arif-widiyanto.pdf" target="_blank" rel="noopener">Download Resume</a>
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Arif Widiyanto</span>
+        </h1>
+        <p class="hero-subtitle">
+          <span class="typed-text" id="typedText"></span>
+          <span class="cursor">|</span>
+        </p>
+        <p class="hero-description">
+          15+ years building resilient IT systems, practical automation, and business-ready software.
+          I blend engineering depth with project execution discipline.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">
+            <span>Hire Me</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="resume-arif-widiyanto.pdf" target="_blank" rel="noopener" class="btn btn-glass">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download Resume</span>
+          </a>
+        </div>
+        <div class="hero-contact">
+          <a href="mailto:arifwidi786@gmail.com" class="contact-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            arifwidi786@gmail.com
+          </a>
+          <a href="tel:+628174930077" class="contact-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            +62 817 493 0077
+          </a>
+        </div>
+      </div>
+      <div class="hero-card glass-card">
+        <div class="card-avatar">
+          <span>AW</span>
+        </div>
+        <h3>Arif Widiyanto</h3>
+        <p class="card-location">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          Jakarta, Indonesia
+        </p>
+        <div class="card-stats">
+          <div class="stat">
+            <span class="stat-value">15+</span>
+            <span class="stat-label">Years Experience</span>
           </div>
-
-          <p class="contact">
-            <a href="mailto:arifwidi786@gmail.com">arifwidi786@gmail.com</a>
-            <span>•</span>
-            <a href="tel:+628174930077">+62 817 493 0077</a>
-            <span>•</span>
-            <a href="https://linkedin.com/in/arifwidiyanto" target="_blank" rel="noopener">LinkedIn</a>
-            <span>•</span>
-            <a href="https://www.arifwidiyanto.com" target="_blank" rel="noopener">Website</a>
-          </p>
+          <div class="stat">
+            <span class="stat-value">5+</span>
+            <span class="stat-label">Major IT Roles</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value">11+</span>
+            <span class="stat-label">Certifications</span>
+          </div>
         </div>
-
-        <aside class="profile-card">
-          <div class="avatar">AW</div>
-          <h3>Arif Widiyanto</h3>
-          <p>Jakarta, Indonesia</p>
-          <ul>
-            <li><strong>15+</strong><span>Years Experience</span></li>
-            <li><strong>5+</strong><span>Major IT Roles</span></li>
-            <li><strong>11+</strong><span>Certifications & Courses</span></li>
-          </ul>
-        </aside>
+        <div class="card-social">
+          <a href="https://linkedin.com/in/arifwidiyanto" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="https://github.com/0x4riff" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+          <a href="https://www.arifwidiyanto.com" target="_blank" rel="noopener" aria-label="Website">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
-  </header>
+    <div class="scroll-indicator">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M19 12l-7 7-7-7"/>
+      </svg>
+    </div>
+  </section>
 
-  <main class="container">
-    <section class="reveal panel about">
-      <h2>About Me</h2>
-      <p>
-        I am a results-oriented IT professional with strong analytical and problem-solving capabilities.
-        My focus is on turning complex technical needs into practical solutions — from infrastructure
-        reliability and automation to modern web development and AI-assisted workflows.
-      </p>
-    </section>
-
-    <section class="reveal panel" id="projects">
-      <div class="section-head">
-        <h2>Selected Highlights</h2>
-        <span>Impact-focused work</span>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About</span>
+        <h2 class="section-title">About Me</h2>
       </div>
-      <div class="cards">
-        <article class="card">
+      <div class="about-content glass-card">
+        <p>
+          I am a results-oriented IT professional with strong analytical and problem-solving capabilities.
+          My focus is on turning complex technical needs into practical solutions — from infrastructure
+          reliability and automation to modern web development and AI-assisted workflows.
+        </p>
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <div>
+              <h4>Engineering Depth</h4>
+              <p>Deep technical knowledge across infrastructure and development</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <div>
+              <h4>Project Execution</h4>
+              <p>Disciplined delivery with measurable outcomes</p>
+            </div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 6v6l4 2"></path>
+              </svg>
+            </div>
+            <div>
+              <h4>Continuous Learning</h4>
+              <p>Always exploring new technologies and methodologies</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Projects</span>
+        <h2 class="section-title">Selected Highlights</h2>
+        <p class="section-subtitle">Impact-focused work</p>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card glass-card">
+          <div class="project-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+          </div>
           <h3>Automation & Operational Stability</h3>
           <p>Designed workflow automation and system operations that reduced repetitive manual effort and improved service consistency.</p>
-          <div class="tag-row"><span>DevOps</span><span>Scripting</span><span>Operations</span></div>
+          <div class="project-tags">
+            <span>DevOps</span>
+            <span>Scripting</span>
+            <span>Operations</span>
+          </div>
         </article>
-        <article class="card">
+        <article class="project-card glass-card">
+          <div class="project-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </div>
           <h3>Secure File Transfer & Compliance Support</h3>
           <p>Managed secure transfer pipelines and operational controls aligned with internal security and governance practices.</p>
-          <div class="tag-row"><span>Security</span><span>Infrastructure</span><span>Compliance</span></div>
+          <div class="project-tags">
+            <span>Security</span>
+            <span>Infrastructure</span>
+            <span>Compliance</span>
+          </div>
         </article>
-        <article class="card">
+        <article class="project-card glass-card">
+          <div class="project-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+              <path d="M12 2a10 10 0 0 1 10 10h-10V2z" fill="currentColor" opacity="0.3"></path>
+            </svg>
+          </div>
           <h3>AI-assisted Engineering Workflow</h3>
           <p>Applied AI tools for faster debugging, script generation, and exploratory analysis to accelerate daily engineering tasks.</p>
-          <div class="tag-row"><span>AI</span><span>Productivity</span><span>Innovation</span></div>
+          <div class="project-tags">
+            <span>AI</span>
+            <span>Productivity</span>
+            <span>Innovation</span>
+          </div>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="reveal panel" id="experience">
-      <div class="section-head">
-        <h2>Experience Timeline</h2>
-        <span>Career journey</span>
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Experience</span>
+        <h2 class="section-title">Career Journey</h2>
       </div>
       <div class="timeline">
-        <article>
-          <h3>DevOps / Fullstack Developer — Seven Event</h3>
-          <p class="meta">2024 - 2025</p>
-        </article>
-        <article>
-          <h3>IT Engineer — Bajau Escorindo</h3>
-          <p class="meta">2020 – 2024</p>
-        </article>
-        <article>
-          <h3>IT Coordinator — Torin Multi Investama</h3>
-          <p class="meta">2014 – 2019</p>
-        </article>
-        <article>
-          <h3>Research Support & IT Development — AAA Sekurities</h3>
-          <p class="meta">2012 – 2014</p>
-        </article>
-        <article>
-          <h3>IT Specialist — Arjuna Resources</h3>
-          <p class="meta">2010 – 2012</p>
-        </article>
-        <article>
-          <h3>IT Project Officer — Jakarta Realty (Thamrin City)</h3>
-          <p class="meta">2009 – 2010</p>
-        </article>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <h3>DevOps / Fullstack Developer</h3>
+              <span class="timeline-company">Seven Event</span>
+            </div>
+            <span class="timeline-date">2024 - 2025</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <h3>IT Engineer</h3>
+              <span class="timeline-company">Bajau Escorindo</span>
+            </div>
+            <span class="timeline-date">2020 - 2024</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <h3>IT Coordinator</h3>
+              <span class="timeline-company">Torin Multi Investama</span>
+            </div>
+            <span class="timeline-date">2014 - 2019</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <h3>Research Support & IT Development</h3>
+              <span class="timeline-company">AAA Sekurities</span>
+            </div>
+            <span class="timeline-date">2012 - 2014</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <h3>IT Specialist</h3>
+              <span class="timeline-company">Arjuna Resources</span>
+            </div>
+            <span class="timeline-date">2010 - 2012</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-header">
+              <h3>IT Project Officer</h3>
+              <span class="timeline-company">Jakarta Realty (Thamrin City)</span>
+            </div>
+            <span class="timeline-date">2009 - 2010</span>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="reveal panel">
-      <div class="section-head">
-        <h2>Tech Stack & Skills</h2>
-        <span>Core strengths</span>
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Skills</span>
+        <h2 class="section-title">Tech Stack & Skills</h2>
+        <p class="section-subtitle">Core strengths</p>
       </div>
-      <div class="chips">
-        <span>DevOps & Automation</span>
-        <span>Fullstack Development</span>
-        <span>Database Management</span>
-        <span>Cross-platform Development</span>
-        <span>Linux / Windows Administration</span>
-        <span>Unit / Integration / System Testing</span>
-        <span>Project Coordination</span>
-        <span>Critical Thinking</span>
+      <div class="skills-grid">
+        <div class="skill-category glass-card">
+          <h4>DevOps & Automation</h4>
+          <p>CI/CD pipelines, infrastructure as code, containerization</p>
+        </div>
+        <div class="skill-category glass-card">
+          <h4>Fullstack Development</h4>
+          <p>Frontend & backend development, API design</p>
+        </div>
+        <div class="skill-category glass-card">
+          <h4>Database Management</h4>
+          <p>SQL & NoSQL databases, data modeling</p>
+        </div>
+        <div class="skill-category glass-card">
+          <h4>Cross-platform Development</h4>
+          <p>Multi-platform application development</p>
+        </div>
+        <div class="skill-category glass-card">
+          <h4>Linux / Windows Administration</h4>
+          <p>System administration & configuration</p>
+        </div>
+        <div class="skill-category glass-card">
+          <h4>Testing</h4>
+          <p>Unit, integration & system testing</p>
+        </div>
+        <div class="skill-category glass-card">
+          <h4>Project Coordination</h4>
+          <p>Team leadership & delivery management</p>
+        </div>
+        <div class="skill-category glass-card">
+          <h4>Critical Thinking</h4>
+          <p>Problem analysis & solution design</p>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="reveal panel cta" id="hire">
-      <h2>Let’s Build Something Valuable</h2>
-      <p>If you need someone who can bridge infrastructure, development, and delivery execution — let’s talk.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="mailto:arifwidi786@gmail.com?subject=Project%20Inquiry%20for%20Arif%20Widiyanto">Hire Me via Email</a>
-        <a class="btn" href="https://linkedin.com/in/arifwidiyanto" target="_blank" rel="noopener">Message on LinkedIn</a>
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="contact-content glass-card">
+        <h2>Let's Build Something Valuable</h2>
+        <p>If you need someone who can bridge infrastructure, development, and delivery execution — let's talk.</p>
+        <div class="contact-actions">
+          <a href="mailto:arifwidi786@gmail.com?subject=Project%20Inquiry%20for%20Arif%20Widiyanto" class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>Hire Me via Email</span>
+          </a>
+          <a href="https://linkedin.com/in/arifwidiyanto" target="_blank" rel="noopener" class="btn btn-glass">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            <span>Message on LinkedIn</span>
+          </a>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer>
-    <div class="container foot">
-      <p>© <span id="year"></span> Arif Widiyanto</p>
-      <p>Built with precision • Deployed on GitHub Pages</p>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; <span id="year"></span> Arif Widiyanto</p>
+        <p>Built with precision • Deployed on GitHub Pages</p>
+      </div>
     </div>
   </footer>
 
   <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme Toggle
     const root = document.documentElement;
     const toggle = document.getElementById('themeToggle');
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) root.setAttribute('data-theme', savedTheme);
-
-    const syncToggleLabel = () => {
-      const isLight = root.getAttribute('data-theme') === 'light';
-      toggle.textContent = isLight ? '☀️ Light' : '🌙 Dark';
-    };
-    syncToggleLabel();
 
     toggle.addEventListener('click', () => {
       const current = root.getAttribute('data-theme');
       const next = current === 'light' ? 'dark' : 'light';
       root.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
-      syncToggleLabel();
     });
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) entry.target.classList.add('show');
+    // Mobile Menu
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        mobileMenu.classList.remove('active');
       });
-    }, { threshold: 0.1 });
+    });
 
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // Typing Effect
+    const texts = ['DevOps Engineer', 'Fullstack Developer', 'AI Enthusiast'];
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typedText = document.getElementById('typedText');
+
+    function type() {
+      const currentText = texts[textIndex];
+      if (isDeleting) {
+        typedText.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typedText.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      if (!isDeleting && charIndex === currentText.length) {
+        isDeleting = true;
+        setTimeout(type, 2000);
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % texts.length;
+        setTimeout(type, 500);
+      } else {
+        setTimeout(type, isDeleting ? 50 : 100);
+      }
+    }
+    type();
+
+    // Scroll Reveal
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+    document.querySelectorAll('.section, .glass-card, .project-card, .timeline-item').forEach(el => {
+      el.classList.add('reveal');
+      observer.observe(el);
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // Nav Background on Scroll
+    const nav = document.querySelector('.nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
   </script>
 </body>
 </html>
