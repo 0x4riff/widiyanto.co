@@ -131,6 +131,8 @@ a { color: inherit; text-decoration: none; }
 }
 .hero-card { padding: 24px; }
 .card-avatar { width: 66px; height: 66px; border-radius: 18px; display: grid; place-items: center; font-weight: 800; color: #fff; background: linear-gradient(130deg, var(--secondary), var(--primary)); }
+.card-avatar-image { padding: 0; overflow: hidden; background: none; }
+.card-avatar-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .card-location { color: var(--muted); display: flex; align-items: center; gap: 8px; }
 .card-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin: 16px 0; }
 .stat { padding: 12px; border-radius: 14px; background: var(--surface-strong); text-align: center; }
