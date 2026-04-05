@@ -182,8 +182,8 @@ img { max-width: 100%; }
 .hero-grid,
 .section-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 34px;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: 38px;
   align-items: center;
 }
 
@@ -196,7 +196,7 @@ img { max-width: 100%; }
 .card-index {
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  font-size: 0.76rem;
+  font-size: 0.7rem;
 }
 
 .eyebrow {
@@ -224,22 +224,22 @@ h1, h2, h3, p {
 }
 
 h1 {
-  font-size: clamp(2.8rem, 6vw, 5.4rem);
-  line-height: 1.01;
-  letter-spacing: -0.055em;
+  font-size: clamp(2.35rem, 5vw, 4.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
   margin-bottom: 18px;
-  max-width: 11.5ch;
+  max-width: 12ch;
 }
 
 h2 {
-  font-size: clamp(1.9rem, 3.3vw, 3.2rem);
-  line-height: 1.04;
-  letter-spacing: -0.05em;
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
   margin-bottom: 14px;
 }
 
 h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 
@@ -252,7 +252,7 @@ h3 {
 .contact-panel p,
 .section-note {
   color: var(--muted);
-  font-size: 1.03rem;
+  font-size: 0.96rem;
 }
 
 .hero-actions,
@@ -303,6 +303,7 @@ h3 {
   overflow: hidden;
   border-radius: 32px;
   background: linear-gradient(180deg, rgba(19, 31, 52, 0.95), rgba(10, 16, 29, 0.92));
+  display: block;
 }
 
 .executive-grid {
@@ -310,8 +311,8 @@ h3 {
 }
 
 .executive-lead {
-  max-width: 64ch;
-  font-size: 1.06rem;
+  max-width: 62ch;
+  font-size: 1rem;
 }
 
 .executive-meta .meta-item strong {
@@ -343,20 +344,40 @@ h3 {
 }
 
 .profile-photo-wrap {
-  aspect-ratio: 1 / 1;
+  position: relative;
+  width: 112px;
+  height: 112px;
+  margin: 26px 26px 0;
+  border-radius: 24px;
   overflow: hidden;
-  background: linear-gradient(135deg, rgba(138,163,255,0.28), rgba(102,240,210,0.18));
+  background: linear-gradient(135deg, rgba(138,163,255,0.16), rgba(102,240,210,0.08));
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.22);
+}
+
+.profile-photo-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(0,0,0,0.08));
+  pointer-events: none;
 }
 
 .profile-photo-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
   display: block;
+  transform: scale(1.02);
+  transform-origin: center top;
 }
 
 .profile-body {
-  padding: 28px;
+  padding: 18px 26px 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .stat-grid,
@@ -367,7 +388,7 @@ h3 {
 
 .stat-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin: 22px 0;
+  margin: 18px 0;
 }
 
 .stat-card {
@@ -379,13 +400,13 @@ h3 {
 
 .stat-card strong {
   display: block;
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   margin-bottom: 4px;
 }
 
 .stat-card span {
   color: var(--muted);
-  font-size: 0.88rem;
+  font-size: 0.8rem;
 }
 
 .signal-strip {
@@ -456,25 +477,37 @@ h3 {
 .feature-icon {
   width: 42px;
   height: 42px;
-  display: grid;
+  min-width: 42px;
+  max-width: 42px;
+  min-height: 42px;
+  max-height: 42px;
+  display: inline-grid;
   place-items: center;
   border-radius: 14px;
   background: linear-gradient(135deg, rgba(138,163,255,0.18), rgba(102,240,210,0.16));
   color: var(--accent-2);
   margin-bottom: 16px;
   border: 1px solid rgba(255,255,255,0.08);
+  overflow: hidden;
+  flex: 0 0 42px;
 }
 
 .achievement-icon svg,
 .feature-icon svg {
   width: 20px;
   height: 20px;
+  min-width: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  max-height: 20px;
+  display: block;
+  flex: none;
 }
 
 .achievement-value {
   display: block;
   margin-bottom: 10px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--text);
 }
@@ -482,6 +515,7 @@ h3 {
 .achievement-label {
   color: var(--muted);
   line-height: 1.55;
+  font-size: 0.9rem;
 }
 
 .section-head {
@@ -618,7 +652,7 @@ h3 {
 
 .contact-premium {
   text-align: center;
-  padding: 46px;
+  padding: 42px;
   background:
     radial-gradient(circle at top center, rgba(102,240,210,0.08), transparent 34%),
     linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025));
@@ -637,7 +671,7 @@ h3 {
 .contact-microcopy {
   margin-top: 16px;
   color: var(--muted);
-  font-size: 0.94rem;
+  font-size: 0.88rem;
 }
 
 html body .nav-links a,
